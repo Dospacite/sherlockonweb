@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+          content="An OS-INT tool that allows the user to quickly search across the web for an username. A web interface for the Sherlock Project tool.">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8046554795288718"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
     <title>Sherlock On Web</title>
 </head>
@@ -32,6 +36,10 @@
             <label for="timeoutField" class="inputLabel">Timeout (s): </label>
             <input type="number" name="timeout" id="timeoutField" max="120" min="5" value="30">
         </span>
+        <span class="searchOption">
+            <label for="simultaneousCount" class="inputLabel">Simultaneous Requests <br>(decrease if lagging): </label>
+            <input type="number" name="simultaneous" id="simultaneousCount" max="999" min="0" value="999">
+        </span>
     </div>
     <span>
         <button id="submitButton" class="submitButton">
@@ -46,15 +54,9 @@
 <div class="container" id="resultsContainer">
     <div id="progressDiv">
         <div id="progressText">
-            <span id="successText" title="Sites Found">
-
-            </span>
-            <span id="failText" title="Sites Not Found">
-
-            </span>
-            <span id="totalText" title="Total Sites">
-
-            </span>
+            <span id="successText" title="Sites Found"></span>
+            <span id="failText" title="Sites Not Found"></span>
+            <span id="totalText" title="Total Sites"></span>
         </div>
         <span id="progressSpan" hidden>
             <label for="searchProgress" class="inputLabel">Progress: </label>
@@ -69,7 +71,10 @@
             How do you use Sherlock?
         </h1>
         <p>
-            Simply enter the username of the subject you want to search across the websites. Toggle the "NSFW Results" checkbox if you want to include NSFW websites in the search. Then, click the "Search" button to start the search. Wait for the search to finish or start browsing the results instantly. Clicking on the sites will open a new page with the subjects' profile.
+            Simply enter the username of the subject you want to search across the websites.
+            Toggle the "NSFW Results" checkbox if you want to include NSFW websites in the search.
+            Then, click the "Search" button to start the search. Wait for the search to finish or start browsing the results instantly.
+            Clicking on the sites will open a new page with the subjects' profile.
         </p>
     </div>
     <div class="informationSubcontainer">
@@ -77,7 +82,10 @@
             What does Sherlock do?
         </h1>
         <p>
-            Sherlock the OSINT tool scourges the web to find profiles that match the subjects' username. Each website has a way of checking whether a profile with a username exists. Sherlock automates this process to allow users to acquire information about a subject. Sherlock On Web is a tool that provides a modern interface for the <a href="https://github.com/sherlock-project">Sherlock Project</a>.
+            Sherlock the OSINT tool scourges the web to find profiles that match the subjects' username.
+            Each website has a way of checking whether a profile with a username exists.
+            Sherlock automates this process to allow users to acquire information about a subject.
+            Sherlock On Web is a tool that provides a modern interface for the <a href="https://github.com/sherlock-project">Sherlock Project</a>.
         </p>
     </div>
     <div class="informationSubcontainer">
@@ -85,13 +93,17 @@
             Keep in mind while using Sherlock:
         </h1>
         <p>
-            If your local laws prohibit you from accessing NSFW websites, using Sherlock might cause legal problems. Using Sherlock sends requests to these websites as if you were trying to access them. The "NSFW Results" checkbox is unchecked by default.
+            If your local laws prohibit you from accessing NSFW websites, using Sherlock might cause legal problems.
+            Using Sherlock sends requests to these websites as if you were trying to access them.
+            The "NSFW Results" checkbox is unchecked by default.
         </p>
     </div>
 </div>
 <footer class="footer">
-    Made by Dospacite with ❤️
-    Not affiliated with the <a href="https://github.com/sherlock-project">Sherlock Project</a> Team or its backers.
+    Made by Dospacite with ❤️<br>
+    <span>
+        Not affiliated with the <a href="https://github.com/sherlock-project"> Sherlock Project </a> Team or its backers.
+    </span>
 </footer>
 <script src="index.js"></script>
 </body>

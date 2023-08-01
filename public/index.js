@@ -186,17 +186,20 @@ class Site {
                 return false;
             }
         }
+
         if (this.errorType === "response_url") {
             if (response.url === this.errorUrl.replace("{}", query)) {
                 return false;
             }
         }
+
         if (this.errorType === "message") {
             let text = await response.text();
             if (text.includes(this.errorMsg)) {
                 return false;
             }
         }
+
         return true;
     }
 }
@@ -213,10 +216,6 @@ class Progress {
         this.successText = document.getElementById("successText");
         this.failText = document.getElementById("failText");
         this.totalText = document.getElementById("totalText");
-    }
-
-    get percentage() {
-        return (this.success + this.fail) / this.total;
     }
 
     addSuccess() {
