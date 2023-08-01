@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Sherlock On Web</title>
+</head>
+<body>
+<div class="container">
+    <span class="title">
+        Sherlock On Web🔍
+    </span>
+    <span class="subtitle">
+        Fill in the username you want to search
+    </span>
+    <label for="usernameField" class="inputLabel" id="usernameFieldLabel">
+        Username
+    </label>
+    <input type="text" id="usernameField" class="textField" title="Username" autofocus>
+    <button id="searchOptionsButton">
+        Additional Options
+    </button>
+    <div id="searchOptions" hidden>
+        <span class="searchOption">
+            <label for="nsfwCheckbox" class="inputLabel">NSFW Results: </label>
+            <input type="checkbox" name="isNSFW" id="nsfwCheckbox">
+        </span>
+        <span class="searchOption">
+            <label for="timeoutField" class="inputLabel">Timeout (s): </label>
+            <input type="number" name="timeout" id="timeoutField" max="120" min="5" value="30">
+        </span>
+    </div>
+    <span>
+        <button id="submitButton" class="submitButton">
+            Search
+        </button>
+        <button id="stopButton" class="submitButton" style="display: none">
+            Stop
+        </button>
+    </span>
+
+</div>
+<div class="container" id="resultsContainer">
+    <div id="progressDiv">
+        <div id="progressText">
+            <span id="successText" title="Sites Found">
+
+            </span>
+            <span id="failText" title="Sites Not Found">
+
+            </span>
+            <span id="totalText" title="Total Sites">
+
+            </span>
+        </div>
+        <span id="progressSpan" hidden>
+            <label for="searchProgress" class="inputLabel">Progress: </label>
+            <progress id="searchProgress" max="100" value="0"></progress>
+        </span>
+    </div>
+    <div id="resultsDiv"></div>
+</div>
+<div class="container" id="informationContainer">
+    <div class="informationSubcontainer">
+        <h1 class="informationTitle">
+            How do you use Sherlock?
+        </h1>
+        <p>
+            Simply enter the username of the subject you want to search across the websites. Toggle the "NSFW Results" checkbox if you want to include NSFW websites in the search. Then, click the "Search" button to start the search. Wait for the search to finish or start browsing the results instantly. Clicking on the sites will open a new page with the subjects' profile.
+        </p>
+    </div>
+    <div class="informationSubcontainer">
+        <h1 class="informationTitle">
+            What does Sherlock do?
+        </h1>
+        <p>
+            Sherlock the OSINT tool scourges the web to find profiles that match the subjects' username. Each website has a way of checking whether a profile with a username exists. Sherlock automates this process to allow users to acquire information about a subject. Sherlock On Web is a tool that provides a modern interface for the <a href="https://github.com/sherlock-project">Sherlock Project</a>.
+        </p>
+    </div>
+    <div class="informationSubcontainer">
+        <h1 class="informationTitle">
+            Keep in mind while using Sherlock:
+        </h1>
+        <p>
+            If your local laws prohibit you from accessing NSFW websites, using Sherlock might cause legal problems. Using Sherlock sends requests to these websites as if you were trying to access them. The "NSFW Results" checkbox is unchecked by default.
+        </p>
+    </div>
+</div>
+<footer class="footer">
+    Made by Dospacite with ❤️
+    Not affiliated with the <a href="https://github.com/sherlock-project">Sherlock Project</a> Team or its backers.
+</footer>
+<script src="index.js"></script>
+</body>
+</html>
